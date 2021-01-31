@@ -1,1 +1,456 @@
-print("Hello World1!!!! tester")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Startup = Instance.new("ScreenGui")
+local StartFrame = Instance.new("ImageLabel")
+local TitleBackround = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local ContinueBackround = Instance.new("ImageLabel")
+local ContinueButton = Instance.new("TextButton")
+local LoginFrame = Instance.new("ImageLabel")
+local Enter = Instance.new("TextButton")
+local PasswordBackround = Instance.new("ImageLabel")
+local TopBar = Instance.new("ImageLabel")
+local Logo = Instance.new("ImageLabel")
+local Title_2 = Instance.new("TextLabel")
+local Version = Instance.new("TextLabel")
+local Password = Instance.new("TextBox")
+local EnterBackroundLine = Instance.new("ImageLabel")
+local MainFrame = Instance.new("ImageLabel")
+local TopBarFrame = Instance.new("ImageLabel")
+local NameOfGUI = Instance.new("TextLabel")
+local Version_2 = Instance.new("TextLabel")
+local Logo_2 = Instance.new("ImageLabel")
+local SideBar = Instance.new("ImageLabel")
+local FixCorner = Instance.new("Frame")
+local Player = Instance.new("ImageLabel")
+local PlayerButtonBackround = Instance.new("ImageLabel")
+local PlayerButton = Instance.new("TextButton")
+local PlayersClickFrame = Instance.new("ImageLabel")
+local TitleBackround_2 = Instance.new("ImageLabel")
+local Title_3 = Instance.new("TextLabel")
+local WalktextBoxBackround = Instance.new("ImageLabel")
+local WalkspeedTextBox = Instance.new("TextBox")
+local EnterButtonBackround = Instance.new("ImageLabel")
+local EnterButton = Instance.new("TextButton")
+
+--Properties:
+
+Startup.Name = "Startup"
+Startup.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+StartFrame.Name = "StartFrame"
+StartFrame.Parent = Startup
+StartFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+StartFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StartFrame.BackgroundTransparency = 1.000
+StartFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+StartFrame.Size = UDim2.new(0, 299, 0, 123)
+StartFrame.Image = "rbxassetid://3570695787"
+StartFrame.ImageColor3 = Color3.fromRGB(113, 113, 113)
+StartFrame.ScaleType = Enum.ScaleType.Slice
+StartFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+StartFrame.SliceScale = 0.100
+
+TitleBackround.Name = "TitleBackround"
+TitleBackround.Parent = StartFrame
+TitleBackround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleBackround.BackgroundTransparency = 1.000
+TitleBackround.Size = UDim2.new(0, 299, 0, 41)
+TitleBackround.Image = "rbxassetid://3570695787"
+TitleBackround.ImageColor3 = Color3.fromRGB(44, 44, 44)
+TitleBackround.ScaleType = Enum.ScaleType.Slice
+TitleBackround.SliceCenter = Rect.new(100, 100, 100, 100)
+TitleBackround.SliceScale = 0.100
+
+Title.Name = "Title"
+Title.Parent = TitleBackround
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Size = UDim2.new(0, 299, 0, 41)
+Title.Font = Enum.Font.SciFi
+Title.Text = "Zentol"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+ContinueBackround.Name = "ContinueBackround"
+ContinueBackround.Parent = StartFrame
+ContinueBackround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ContinueBackround.BackgroundTransparency = 1.000
+ContinueBackround.Position = UDim2.new(0.317725748, 0, 0.544715405, 0)
+ContinueBackround.Size = UDim2.new(0, 109, 0, 41)
+ContinueBackround.Image = "rbxassetid://3570695787"
+ContinueBackround.ImageColor3 = Color3.fromRGB(44, 44, 44)
+ContinueBackround.ScaleType = Enum.ScaleType.Slice
+ContinueBackround.SliceCenter = Rect.new(100, 100, 100, 100)
+ContinueBackround.SliceScale = 0.100
+
+ContinueButton.Name = "ContinueButton"
+ContinueButton.Parent = ContinueBackround
+ContinueButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ContinueButton.BackgroundTransparency = 1.000
+ContinueButton.Size = UDim2.new(0, 109, 0, 41)
+ContinueButton.Font = Enum.Font.SciFi
+ContinueButton.Text = "Continue"
+ContinueButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+ContinueButton.TextScaled = true
+ContinueButton.TextSize = 14.000
+ContinueButton.TextWrapped = true
+
+LoginFrame.Name = "LoginFrame"
+LoginFrame.Parent = Startup
+LoginFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+LoginFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginFrame.BackgroundTransparency = 1.000
+LoginFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+LoginFrame.Size = UDim2.new(0, 476, 0, 288)
+LoginFrame.Visible = false
+LoginFrame.Image = "rbxassetid://3570695787"
+LoginFrame.ImageColor3 = Color3.fromRGB(0, 0, 0)
+LoginFrame.ScaleType = Enum.ScaleType.Slice
+LoginFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+LoginFrame.SliceScale = 0.020
+
+Enter.Name = "Enter"
+Enter.Parent = LoginFrame
+Enter.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Enter.BackgroundTransparency = 1.000
+Enter.Position = UDim2.new(0.220588237, 0, 0.694444478, 0)
+Enter.Size = UDim2.new(0, 266, 0, 50)
+Enter.Font = Enum.Font.SciFi
+Enter.Text = "Enter!"
+Enter.TextColor3 = Color3.fromRGB(255, 255, 255)
+Enter.TextScaled = true
+Enter.TextSize = 14.000
+Enter.TextWrapped = true
+
+PasswordBackround.Name = "PasswordBackround"
+PasswordBackround.Parent = Enter
+PasswordBackround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PasswordBackround.BackgroundTransparency = 1.000
+PasswordBackround.Position = UDim2.new(0.124060154, 0, -1.62, 0)
+PasswordBackround.Size = UDim2.new(0, 200, 0, 50)
+PasswordBackround.Image = "rbxassetid://3570695787"
+PasswordBackround.ImageColor3 = Color3.fromRGB(45, 45, 44)
+PasswordBackround.ScaleType = Enum.ScaleType.Slice
+PasswordBackround.SliceCenter = Rect.new(100, 100, 100, 100)
+PasswordBackround.SliceScale = 0.040
+
+TopBar.Name = "TopBar"
+TopBar.Parent = LoginFrame
+TopBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopBar.BackgroundTransparency = 1.000
+TopBar.Size = UDim2.new(0, 476, 0, 42)
+TopBar.Image = "rbxassetid://3570695787"
+TopBar.ImageColor3 = Color3.fromRGB(45, 45, 44)
+TopBar.ScaleType = Enum.ScaleType.Slice
+TopBar.SliceCenter = Rect.new(100, 100, 100, 100)
+TopBar.SliceScale = 0.040
+
+Logo.Name = "Logo"
+Logo.Parent = TopBar
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.BorderSizePixel = 0
+Logo.Position = UDim2.new(0, 0, -0.00793647766, 0)
+Logo.Size = UDim2.new(0, 44, 0, 41)
+Logo.Image = "http://www.roblox.com/asset/?id=1292407368"
+
+Title_2.Name = "Title"
+Title_2.Parent = TopBar
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.052521009, 0, 0, 0)
+Title_2.Size = UDim2.new(0, 94, 0, 42)
+Title_2.Font = Enum.Font.SourceSansBold
+Title_2.Text = "Zentol"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 20.000
+
+Version.Name = "Version"
+Version.Parent = LoginFrame
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.Position = UDim2.new(0.907563031, 0, 0, 0)
+Version.Size = UDim2.new(0, 44, 0, 42)
+Version.Font = Enum.Font.SourceSansBold
+Version.Text = "V.1"
+Version.TextColor3 = Color3.fromRGB(255, 255, 255)
+Version.TextSize = 20.000
+
+Password.Name = "Password"
+Password.Parent = LoginFrame
+Password.BackgroundColor3 = Color3.fromRGB(45, 45, 44)
+Password.BackgroundTransparency = 1.000
+Password.Position = UDim2.new(0.289915979, 0, 0.413194448, 0)
+Password.Size = UDim2.new(0, 200, 0, 50)
+Password.Font = Enum.Font.SciFi
+Password.Text = "Password!"
+Password.TextColor3 = Color3.fromRGB(255, 255, 255)
+Password.TextScaled = true
+Password.TextSize = 14.000
+Password.TextWrapped = true
+
+EnterBackroundLine.Name = "EnterBackroundLine"
+EnterBackroundLine.Parent = Password
+EnterBackroundLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterBackroundLine.BackgroundTransparency = 1.000
+EnterBackroundLine.Position = UDim2.new(0.155000001, 0, 2.61999989, 0)
+EnterBackroundLine.Size = UDim2.new(0, 138, 0, 11)
+EnterBackroundLine.Image = "rbxassetid://3570695787"
+EnterBackroundLine.ImageColor3 = Color3.fromRGB(45, 45, 44)
+EnterBackroundLine.ScaleType = Enum.ScaleType.Slice
+EnterBackroundLine.SliceCenter = Rect.new(100, 100, 100, 100)
+EnterBackroundLine.SliceScale = 0.040
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Startup
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.Position = UDim2.new(0.229312241, 0, 0.193370163, 0)
+MainFrame.Size = UDim2.new(0, 453, 0, 333)
+MainFrame.Visible = false
+MainFrame.Image = "rbxassetid://3570695787"
+MainFrame.ImageColor3 = Color3.fromRGB(30, 30, 30)
+MainFrame.ScaleType = Enum.ScaleType.Slice
+MainFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+MainFrame.SliceScale = 0.040
+
+TopBarFrame.Name = "TopBarFrame"
+TopBarFrame.Parent = MainFrame
+TopBarFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopBarFrame.BackgroundTransparency = 1.000
+TopBarFrame.Size = UDim2.new(0, 453, 0, 43)
+TopBarFrame.Image = "rbxassetid://3570695787"
+TopBarFrame.ImageColor3 = Color3.fromRGB(0, 0, 0)
+TopBarFrame.ScaleType = Enum.ScaleType.Slice
+TopBarFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+TopBarFrame.SliceScale = 0.040
+
+NameOfGUI.Name = "NameOfGUI"
+NameOfGUI.Parent = TopBarFrame
+NameOfGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameOfGUI.BackgroundTransparency = 1.000
+NameOfGUI.Position = UDim2.new(0.0331125855, 0, 0, 0)
+NameOfGUI.Size = UDim2.new(0, 96, 0, 43)
+NameOfGUI.Font = Enum.Font.SourceSansBold
+NameOfGUI.Text = "Zentol"
+NameOfGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameOfGUI.TextSize = 20.000
+NameOfGUI.TextWrapped = true
+
+Version_2.Name = "Version"
+Version_2.Parent = TopBarFrame
+Version_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version_2.BackgroundTransparency = 1.000
+Version_2.Position = UDim2.new(0.880794704, 0, 0, 0)
+Version_2.Size = UDim2.new(0, 54, 0, 43)
+Version_2.Font = Enum.Font.SourceSansBold
+Version_2.Text = "V.1"
+Version_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Version_2.TextSize = 20.000
+Version_2.TextWrapped = true
+
+Logo_2.Name = "Logo"
+Logo_2.Parent = TopBarFrame
+Logo_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo_2.BackgroundTransparency = 1.000
+Logo_2.Size = UDim2.new(0, 34, 0, 43)
+Logo_2.Image = "http://www.roblox.com/asset/?id=1292407368"
+
+SideBar.Name = "SideBar"
+SideBar.Parent = MainFrame
+SideBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SideBar.BackgroundTransparency = 1.000
+SideBar.Position = UDim2.new(0, 0, 0.129129127, 0)
+SideBar.Size = UDim2.new(0, 100, 0, 290)
+SideBar.Image = "rbxassetid://3570695787"
+SideBar.ImageColor3 = Color3.fromRGB(0, 0, 0)
+SideBar.ScaleType = Enum.ScaleType.Slice
+SideBar.SliceCenter = Rect.new(100, 100, 100, 100)
+SideBar.SliceScale = 0.040
+
+FixCorner.Name = "FixCorner"
+FixCorner.Parent = SideBar
+FixCorner.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FixCorner.BorderSizePixel = 0
+FixCorner.Position = UDim2.new(0.819999993, 0, 0, 0)
+FixCorner.Size = UDim2.new(0, 18, 0, 14)
+
+Player.Name = "Player"
+Player.Parent = MainFrame
+Player.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Player.BackgroundTransparency = 1.000
+Player.BorderSizePixel = 0
+Player.Position = UDim2.new(0.0132450331, 0, 0.255255252, 0)
+Player.Size = UDim2.new(0, 22, 0, 23)
+Player.Image = "rbxassetid://4728092758"
+
+PlayerButtonBackround.Name = "PlayerButtonBackround"
+PlayerButtonBackround.Parent = Player
+PlayerButtonBackround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerButtonBackround.BackgroundTransparency = 1.000
+PlayerButtonBackround.Position = UDim2.new(1.27272725, 0, 0, 0)
+PlayerButtonBackround.Size = UDim2.new(0, 59, 0, 23)
+PlayerButtonBackround.Image = "rbxassetid://3570695787"
+PlayerButtonBackround.ImageColor3 = Color3.fromRGB(30, 30, 30)
+PlayerButtonBackround.ScaleType = Enum.ScaleType.Slice
+PlayerButtonBackround.SliceCenter = Rect.new(100, 100, 100, 100)
+PlayerButtonBackround.SliceScale = 0.040
+
+PlayerButton.Name = "PlayerButton"
+PlayerButton.Parent = PlayerButtonBackround
+PlayerButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerButton.BackgroundTransparency = 1.000
+PlayerButton.Size = UDim2.new(0, 59, 0, 23)
+PlayerButton.Font = Enum.Font.SourceSansBold
+PlayerButton.Text = "Player"
+PlayerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerButton.TextSize = 14.000
+
+PlayersClickFrame.Name = "PlayersClickFrame"
+PlayersClickFrame.Parent = MainFrame
+PlayersClickFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayersClickFrame.BackgroundTransparency = 1.000
+PlayersClickFrame.Position = UDim2.new(0.220750555, 0, 0.129129142, 0)
+PlayersClickFrame.Size = UDim2.new(0, 352, 0, 100)
+PlayersClickFrame.Visible = false
+PlayersClickFrame.Image = "rbxassetid://3570695787"
+PlayersClickFrame.ImageColor3 = Color3.fromRGB(59, 59, 59)
+PlayersClickFrame.ScaleType = Enum.ScaleType.Slice
+PlayersClickFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+PlayersClickFrame.SliceScale = 0.040
+
+TitleBackround_2.Name = "TitleBackround"
+TitleBackround_2.Parent = PlayersClickFrame
+TitleBackround_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleBackround_2.BackgroundTransparency = 1.000
+TitleBackround_2.Position = UDim2.new(0.03125, 0, 0.140000001, 0)
+TitleBackround_2.Size = UDim2.new(0, 100, 0, 30)
+TitleBackround_2.Image = "rbxassetid://3570695787"
+TitleBackround_2.ImageColor3 = Color3.fromRGB(94, 94, 94)
+TitleBackround_2.ScaleType = Enum.ScaleType.Slice
+TitleBackround_2.SliceCenter = Rect.new(100, 100, 100, 100)
+TitleBackround_2.SliceScale = 0.040
+
+Title_3.Name = "Title"
+Title_3.Parent = TitleBackround_2
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.BorderSizePixel = 0
+Title_3.Size = UDim2.new(0, 100, 0, 30)
+Title_3.Font = Enum.Font.SourceSansBold
+Title_3.Text = "Walkspeed"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextSize = 20.000
+Title_3.TextWrapped = true
+
+WalktextBoxBackround.Name = "WalktextBoxBackround"
+WalktextBoxBackround.Parent = PlayersClickFrame
+WalktextBoxBackround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WalktextBoxBackround.BackgroundTransparency = 1.000
+WalktextBoxBackround.Position = UDim2.new(0.03125, 0, 0.589999974, 0)
+WalktextBoxBackround.Size = UDim2.new(0, 333, 0, 26)
+WalktextBoxBackround.Image = "rbxassetid://3570695787"
+WalktextBoxBackround.ImageColor3 = Color3.fromRGB(94, 94, 94)
+WalktextBoxBackround.ScaleType = Enum.ScaleType.Slice
+WalktextBoxBackround.SliceCenter = Rect.new(100, 100, 100, 100)
+WalktextBoxBackround.SliceScale = 0.040
+
+WalkspeedTextBox.Name = "WalkspeedTextBox"
+WalkspeedTextBox.Parent = WalktextBoxBackround
+WalkspeedTextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WalkspeedTextBox.BackgroundTransparency = 1.000
+WalkspeedTextBox.BorderSizePixel = 0
+WalkspeedTextBox.Size = UDim2.new(0, 333, 0, 26)
+WalkspeedTextBox.Font = Enum.Font.SourceSansBold
+WalkspeedTextBox.Text = "16"
+WalkspeedTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+WalkspeedTextBox.TextSize = 20.000
+
+EnterButtonBackround.Name = "EnterButtonBackround"
+EnterButtonBackround.Parent = PlayersClickFrame
+EnterButtonBackround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterButtonBackround.BackgroundTransparency = 1.000
+EnterButtonBackround.Position = UDim2.new(0.693181813, 0, 0.140000001, 0)
+EnterButtonBackround.Size = UDim2.new(0, 100, 0, 28)
+EnterButtonBackround.Image = "rbxassetid://3570695787"
+EnterButtonBackround.ImageColor3 = Color3.fromRGB(94, 94, 94)
+EnterButtonBackround.ScaleType = Enum.ScaleType.Slice
+EnterButtonBackround.SliceCenter = Rect.new(100, 100, 100, 100)
+EnterButtonBackround.SliceScale = 0.040
+
+EnterButton.Name = "EnterButton"
+EnterButton.Parent = EnterButtonBackround
+EnterButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterButton.BackgroundTransparency = 1.000
+EnterButton.BorderSizePixel = 0
+EnterButton.Size = UDim2.new(0, 100, 0, 28)
+EnterButton.Font = Enum.Font.SourceSansBold
+EnterButton.Text = "Enter"
+EnterButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnterButton.TextSize = 20.000
+
+-- Scripts:
+
+local function VAGINHF_fake_script() -- ContinueButton.LocalScript 
+	local script = Instance.new('LocalScript', ContinueButton)
+
+	local ContinueButton = script.Parent
+	local StartFrame = script.Parent.Parent.Parent.Parent.StartFrame
+	local loginframe = script.Parent.Parent.Parent.Parent.StartFrame.Parent.LoginFrame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		StartFrame.Visible = false
+		wait(0.5)
+		loginframe.Visible = true
+	end)
+end
+coroutine.wrap(VAGINHF_fake_script)()
+local function NHNEKXN_fake_script() -- Password.KeyMaker 
+	local script = Instance.new('LocalScript', Password)
+
+	local Enter = script.Parent.Parent.Enter
+	local Password = script.Parent
+	local LoginFrame = script.Parent.Parent.Parent.LoginFrame
+	local MainFrame = script.Parent.Parent.Parent.MainFrame
+	
+	Enter.MouseButton1Click:Connect(function()
+		if Password.Text == "test" then
+			LoginFrame.Visible = false
+			MainFrame.Visible = true
+		else
+			LoginFrame.Visible = true
+			Enter.Text = "Wrong Password please try again!"
+			wait(2)
+			Enter.Text = "Enter!"
+		end
+	end)
+end
+coroutine.wrap(NHNEKXN_fake_script)()
+local function GKTUVQU_fake_script() -- PlayerButton.OpenScript 
+	local script = Instance.new('LocalScript', PlayerButton)
+
+	local playerbutton = script.Parent
+	local PlayersClickFrame = script.Parent.Parent.Parent.Parent.PlayersClickFrame
+	
+	playerbutton.MouseButton1Click:Connect(function()
+		PlayersClickFrame.Visible = true
+	end)
+end
+coroutine.wrap(GKTUVQU_fake_script)()
+local function NRXJO_fake_script() -- EnterButton.Walkspeed 
+	local script = Instance.new('LocalScript', EnterButton)
+
+	local EnterButton = script.Parent
+	local WalkspeedTextBox = script.Parent.Parent.Parent.WalktextBoxBackround.WalkspeedTextBox
+	
+	EnterButton.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkspeedTextBox.Text
+	end)
+end
+coroutine.wrap(NRXJO_fake_script)()
